@@ -1,7 +1,7 @@
 
 export const signin = async (user) => {
     try {
-        const response = await fetch('http://localhost:3000/auth/signin', {
+        const response = await fetch('/auth/signin', {
             method: 'POST',
             body: JSON.stringify(user),
             headers: {
@@ -18,7 +18,7 @@ export const signin = async (user) => {
 
 export const signoutAPI = async () => {
     try { 
-        const response = await fetch('http://localhost:3000/auth/signout', {
+        const response = await fetch('/auth/signout', {
             method: 'GET',
         })
         return await response.json()
