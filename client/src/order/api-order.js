@@ -15,7 +15,7 @@ export const getOrder = async (params, tokenObj, signal) => {
 
 export const createOrderAndCharge = async (params, tokenObj, order) => {
     try {
-        const res = await fetch(`/api/order/${params.shopId}/createCharge/${params.userId}`, {
+        const res = await fetch(`/api/orders/${params.shopId}/createCharge/${params.userId}`, {
             method: 'POST',
             headers: {
                 'Accept': 'application/json',
@@ -49,7 +49,7 @@ export const getOrdersByShop = async (shop, tokenObj, signal) => {
 
 export const getStatusValues = async (signal) => {
     try {
-        const res = await fetch('/api/order/status_values', {
+        const res = await fetch('/api/orders/status_values', {
             method: 'GET',
             signal: signal
         })
@@ -61,7 +61,7 @@ export const getStatusValues = async (signal) => {
 
 export const cancelOrder = async (params, tokenObj, products) => {
     try {
-        const res = await fetch(`/api/order/${params.shopId}/cancel/${params.orderId}`, {
+        const res = await fetch(`/api/orders/${params.shopId}/cancel/${params.orderId}`, {
             method: 'PUT',
             headers: {
                 'Accept': 'application/json',
@@ -78,7 +78,7 @@ export const cancelOrder = async (params, tokenObj, products) => {
 
 export const updateOrderStatus = async (params, tokenObj, order) => {
     try {
-        const res = await fetch(`/api/order/${params.shopId}/status`, {
+        const res = await fetch(`/api/orders/${params.shopId}/status`, {
             method: 'PUT',
             headers: {
                 'Accept': 'application/json',

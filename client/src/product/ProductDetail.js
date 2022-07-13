@@ -70,7 +70,7 @@ const ProductDetail = () => {
                                 component='img'
                                 alt={product.name}
                                 sx={{ objectFit: 'contain', minHeight: '80px', height: '140px' }}
-                                image={`/api/product/image/${product._id}`}
+                                image={`/api/products/image/${product._id}`}
                             />)}
                         </Grid>
                         <Grid item xs={12} sm={6}>

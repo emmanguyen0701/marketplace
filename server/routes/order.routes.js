@@ -8,35 +8,35 @@ import shopController from '../controllers/shop.controller'
 
 const router = express.Router()
 
-router.get('/api/order/status_values', 
+router.get('/status_values', 
     orderController.getStatusValues)
 
-router.get('/api/orders/:orderId', orderController.getOrderById)
+router.get('/:orderId', orderController.getOrderById)
 
-router.get('/api/orders/shop/:shopId', 
+router.get('/shop/:shopId', 
     authController.requireSignin,
     shopController.isOwner,
     orderController.getOrdersByShop)
 
-router.post('/api/order/:shopId/createCharge/:userId',
+router.post('/:shopId/createCharge/:userId',
     authController.requireSignin,
     orderController.createOrder,
     userController.stripeCustomer,
     productController.decreaseStockQuantity,
     userController.createCharge)
 
-router.put('/api/order/:shopId/cancel/:orderId', 
+router.put('/:shopId/cancel/:orderId', 
     authController.requireSignin,
     shopController.isOwner,
     orderController.cancelOrder,
     productController.increaseStockQuantity)
 
-router.put('/api/order/:shopId/status', 
+router.put('/:shopId/status', 
     authController.requireSignin,
     shopController.isOwner,
     orderController.updateStatus)
 
-router.get('/api/orders/user/:userId',
+router.get('/user/:userId',
     authController.requireSignin,
     orderController.getOrdersByUser)
 

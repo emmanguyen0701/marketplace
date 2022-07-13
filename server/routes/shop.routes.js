@@ -10,28 +10,28 @@ router.param('userId', userController.getUserById)
 
 router.param('shopId', shopController.getShopById)
 
-router.get('/api/shops/:shopId', shopController.getShop)
+router.get('/:shopId', shopController.getShop)
 
-router.post('/api/shops/by/:userId', 
+router.post('/by/:userId', 
     authController.requireSignin,
     authController.hasAuthorization,
     shopController.isSeller, shopController.createShop)
 
-router.get('/api/shops/by/:userId', 
+router.get('/by/:userId', 
     authController.requireSignin,
     authController.hasAuthorization,
     shopController.isSeller, shopController.getShopList)
 
-router.get('/api/shops/logo/:shopId', shopController.getLogo)
+router.get('/logo/:shopId', shopController.getLogo)
 
-router.get('/api/shops', shopController.listShops)
+router.get('/', shopController.listShops)
 
-router.put('/api/shops/:shopId',
+router.put('/:shopId',
     authController.requireSignin,
     shopController.isOwner,
     shopController.updateShop)
 
-router.delete('/api/shops/:shopId',
+router.delete('/:shopId',
     authController.requireSignin,
     shopController.isOwner,
     shopController.removeShop)

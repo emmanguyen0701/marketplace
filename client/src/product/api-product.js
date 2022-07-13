@@ -67,7 +67,7 @@ export const listProductDetail = async (signal, product) => {
 
 export const updateProduct = async (shop, product, tokenObj, updatedProduct) => {
     try {
-        const response = await fetch(`/api/product/${shop.shopId}/${product.productId}`, {
+        const response = await fetch(`/api/products/${shop.shopId}/${product.productId}`, {
             method: 'PUT',
             headers: {
                 Accept: 'application/json',
@@ -83,7 +83,7 @@ export const updateProduct = async (shop, product, tokenObj, updatedProduct) => 
 
 export const deleteProduct = async (shop, product, tokenObj) => {
     try {
-        const response = await fetch(`/api/product/${shop.shopId}/${product.productId}`, {
+        const response = await fetch(`/api/products/${shop.shopId}/${product.productId}`, {
             method: 'DELETE',
             headers: {
                 'Accept': 'application/json',

@@ -72,7 +72,7 @@ const ProductOrderEdit = ({ order, updateOrders, orderIdx }) => {
                     <ListItem key={idx}>
                         <ListItemText primary={<Box sx={{ display: 'flex', minWidth: '280px', width: '32%',  }}>
                             <img style={{ objectFit: 'contain', width: '100px', height: '100%', marginRight: '20px'  }}
-                                        src={`/api/product/image/${item.product._id}`} />
+                                        src={`/api/products/image/${item.product._id}`} />
                             <div>
                                 <div style={{ fontSize: '18px' }}>{capitalizeFirstLetter(item.product.name)}</div>
                                 <p style={{ color: '#585a5e' }}>Quantity: {item.quantity}</p>

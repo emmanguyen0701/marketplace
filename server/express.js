@@ -36,10 +36,10 @@ app.use(helmet())
 app.use(cors(corsOptions))
 
 app.use('/auth', authRoutes)
-app.use('/', userRoutes)
-app.use('/', shopRoutes)
-app.use('/', productRoutes)
-app.use('/', orderRoutes)
+app.use('/api/users', userRoutes)
+app.use('/api/shops', shopRoutes)
+app.use('/api/products', productRoutes)
+app.use('/api/orders', orderRoutes)
 
 app.get('*', (req, res, next) => {
     res.send(template())

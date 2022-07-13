@@ -76,7 +76,7 @@ export const deleteUser = async (user, tokenObj) => {
 
 export const stripeUpdate = async (user, tokenObj, stripeCode, signal) => {
     try {
-        const response = await fetch(`/api/stripe_auth/${user.userId}`, {
+        const response = await fetch(`/api/users/stripe_auth/${user.userId}`, {
             method: 'PUT',
             signal: signal,
             headers: {
