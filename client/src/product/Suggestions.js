@@ -35,7 +35,7 @@ const Suggestions = ({ products, title }) => {
                             component='img'
                             alt={product.name}
                             sx={{ objectFit: 'contain', m: 'auto', height: '170px', width: 'auto' }}
-                            image={`/api/product/image/${product._id}`}
+                            image={`/api/products/image/${product._id}`}
                         />
                         <Box sx={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between' }}>
                             <CardContent sx={{ width: '100%', pt: '10px'}}>

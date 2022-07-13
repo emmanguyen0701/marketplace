@@ -49,7 +49,7 @@ const CartItems = ({showCheckout }) => {
                     <CardMedia 
                         component='img'
                         alt={item.product.name}
-                        image={`/api/product/image/${item.product._id}`}
+                        image={`/api/products/image/${item.product._id}`}
                         sx={{ objectFit: 'contain', height: '170px', width: '40%' }}
                     />
                     <Box sx={{ width: '60%', pl: '30px' }}> 

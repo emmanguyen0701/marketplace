@@ -46,7 +46,7 @@ const MyProducts = ({ products, updateProducts }) => {
                         component='img'
                         alt={product.name}
                         sx={{ objectFit: 'cover', width: '140px', mr: '40px', }}
-                        image={`/api/product/image/${product?._id}`}
+                        image={`/api/products/image/${product?._id}`}
                     />
                     <Box sx={{ width: '280px' }}>
                         <Typography sx={{ mt: '20px' }} variant='h6'>{product.name}</Typography>

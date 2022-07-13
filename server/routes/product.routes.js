@@ -6,32 +6,32 @@ import productController from '../controllers/product.controller'
 
 const routes = express.Router()
 
-routes.get('/api/products', productController.getProductsByShop)
+routes.get('/', productController.getProductsByShop)
 
-routes.get('/api/products/categories', productController.getCategories)
+routes.get('/categories', productController.getCategories)
 
-routes.get('/api/products/latest', productController.getLatestProducts)
+routes.get('/latest', productController.getLatestProducts)
 
-routes.get('/api/products/related/:productId', productController.getRelatedProducts)
+routes.get('/related/:productId', productController.getRelatedProducts)
 
-routes.get('/api/products/:productId', productController.getProduct)
+routes.get('/:productId', productController.getProduct)
 
-routes.get('/api/product/image/:productId', productController.getProductImage)
+routes.get('/image/:productId', productController.getProductImage)
 
-routes.post('/api/products/by/:shopId', 
+routes.post('/by/:shopId', 
     authController.requireSignin,
     shopController.isOwner,
     productController.createProduct,
 )
-routes.get('/api/products/by/:shopId', productController.getProductsByShopByShop)
+routes.get('/by/:shopId', productController.getProductsByShopByShop)
 
-routes.put('/api/product/:shopId/:productId', 
+routes.put('/:shopId/:productId', 
     authController.requireSignin,
     shopController.isOwner,
     productController.updateProduct,
 )
 
-routes.delete('/api/product/:shopId/:productId',
+routes.delete('/:shopId/:productId',
     authController.requireSignin,
     shopController.isOwner,
     productController.deleteProduct,

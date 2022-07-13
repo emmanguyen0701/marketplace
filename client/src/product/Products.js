@@ -33,7 +33,7 @@ const Products = ({ products, searched }) => {
                         <CardMedia 
                             component='img'
                             alt={product.name}
-                            image={`/api/product/image/${product._id}`}
+                            image={`/api/products/image/${product._id}`}
                             sx={{ objectFit: 'contain', m: 'auto', height: '170px', width: 'auto' }}
                         /> 
                         <Box sx={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between' }}>

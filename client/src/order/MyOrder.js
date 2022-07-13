@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Link, useParams } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 
 import { Typography, Card, 
     CardMedia, Box,
@@ -61,7 +61,7 @@ const MyOrder = () => {
                             <CardMedia 
                                 component='img'
                                 alt={item.product.name}
-                                image={`/api/product/image/${item.product._id}`}
+                                image={`/api/products/image/${item.product._id}`}
                                 sx={{ objectFit: 'contain', height: '170px', width: '40%' }}
                             />
                             <Box sx={{ width: '60%', pl: '30px', mt: '4px' }}> 
