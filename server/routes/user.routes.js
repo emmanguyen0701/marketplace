@@ -8,7 +8,7 @@ const router = express.Router()
 
 router.get('/', userController.getUsers)
 
-router.post('/api/users', 
+router.post('/', 
         body('password', "Password must have at least 3 characteres")
         .isLength({ min: 3 })
 , userController.createUser)

@@ -9,6 +9,7 @@ import Profile from '../models/profile.model'
 
 const signin = async (req, res) => {
     const errors = validationResult(req)
+
     if (!errors.isEmpty()) {
         const errorMsg = errors.array()[0].msg
         return res.status(400).json({
@@ -18,6 +19,7 @@ const signin = async (req, res) => {
 
     try {
         const user = await User.findOne({ email: req.body.email }).exec()
+
         if (!user) {
             return res.status(401).json({
                 error: 'User not found.'
