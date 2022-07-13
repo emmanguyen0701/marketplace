@@ -19,11 +19,6 @@ const app = express()
 
 devBundle.compile(app)
 
-const corsOptions = {
-    origin: 'http://localhost:3000',
-    credentials: true,
-    optionSuccessStatus: 200,
-}
 
 app.use('/dist', express.static(path.join(CURRENT_WORKING_DIR, 'dist')))
 app.use('/client/src/public/js', express.static(path.join(CURRENT_WORKING_DIR, 'client/src/public/js')))
@@ -33,7 +28,7 @@ app.use(express.urlencoded({ extended: true, limit: '50mb' }))
 app.use(cookieParser())
 app.use(compression())
 app.use(helmet())
-app.use(cors(corsOptions))
+app.use(cors())
 
 app.use('/auth', authRoutes)
 app.use('/api/users', userRoutes)
