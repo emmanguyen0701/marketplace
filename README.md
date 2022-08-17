@@ -7,9 +7,9 @@ An online e-commerce application with seller accounts, product search and sugges
 ### [Live Demo](https://market-place-en.herokuapp.com/) 
 
 #### What you need to run this code
-1. Node (14.x)
-2. NPM (6.x)
-3. MongoDB (4.x)
+1. Node (14.x.x)
+2. NPM (6.x.x)
+3. MongoDB (4.x.x)
 
 ####  How to run this code
 1. Make sure MongoDB is running on your system.
