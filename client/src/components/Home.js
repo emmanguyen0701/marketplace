@@ -4,7 +4,6 @@ import Suggestions from '../product/Suggestions'
 import Search from '../product/Search'
 import Categories from '../product/Categories'
 import {  getCategories, getLatestProducts } from '../product/api-product'
-import useWindowDimension from '../hook/useWindowDimension'
 
 
 const Home = () => {

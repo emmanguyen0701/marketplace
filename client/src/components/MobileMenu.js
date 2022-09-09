@@ -15,8 +15,9 @@ import { useCart } from '../contexts/Cart'
 
 const pages = [
     { page: 'All Shops', link: '/shops/all' },
+    { page: 'Auctions', link: '/auctions/all' },
     { page: 'Sign in', link: '/signin' },
-    { page: 'Sign up', link: '/signup' }
+    { page: 'Sign up', link: '/signup' },
 ]
 
 const StyledBadge = styled(Badge)(({ theme }) => ({
@@ -84,6 +85,7 @@ const MobileMenu = () => {
                                 <Typography>All Shops</Typography>
                             </Link>
                         </MenuItem>
+    
                         <MenuItem key={'myProfile'} onClick={handleCloseNavMenu} sx={{  width: '120px', ml: 1 }}>
                             <Link to={`/users/${authObj.user._id}`} style={{ textDecoration: 'none', color: 'black', fontWeight: '600' }}>
                                 <Typography>My Profile</Typography>

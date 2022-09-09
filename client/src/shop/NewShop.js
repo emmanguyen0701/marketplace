@@ -56,7 +56,7 @@ const NewShop = () => {
 
     return (
     <Card sx={{ maxWidth: '600px', m: 'auto', mt: '20px' }}>
-        <CardContent sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center',  }}>
+        <CardContent sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
             <Typography variant='h5' sx={{ mb: '20px' }}>New Shop</Typography>
             {values.error && (
                 <Typography sx={{ color: 'error.main', mb: '20px' }}>{values.error}</Typography>
@@ -85,15 +85,15 @@ const NewShop = () => {
                 onChange={handleChange('description')}
             />
             <Box sx={{ width: '80%', display: 'flex', justifyContent: 'center', mt: '20px'  }}>
-            <CardActions>
-                <Button onClick={handleSubmit}
-                sx={{ bgcolor: 'primary.main', color: 'primary.contrastText', 'width': '80px', '&:hover': { bgcolor: '#b82727' } }}
-                >Submit</Button>
-            </CardActions>
-            <CardActions>
-                <Button sx={{ bgcolor: 'tertiary.main', color: 'tertiary.contrastText', width: '80px', '&:hover': { bgcolor: 'tertiary.hover' } }}
-                >Cancel</Button>
-            </CardActions>
+                <CardActions>
+                    <Button onClick={handleSubmit}
+                    sx={{ bgcolor: 'primary.main', color: 'primary.contrastText', 'width': '80px', '&:hover': { bgcolor: '#b82727' } }}
+                    >Submit</Button>
+                </CardActions>
+                <CardActions>
+                    <Button sx={{ bgcolor: 'tertiary.main', color: 'tertiary.contrastText', width: '80px', '&:hover': { bgcolor: 'tertiary.hover' } }}
+                    >Cancel</Button>
+                </CardActions>
             </Box>
         </CardContent>
     </Card>)

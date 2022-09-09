@@ -1,6 +1,8 @@
 import React from 'react'
 import { Route, Routes } from 'react-router-dom'
 
+import useWindowDimension from './hook/useWindowDimension'
+
 import Menu from './components/Menu'
 import PrivateRoute from './auth/PrivateRoute'
 import Home from './components/Home'
@@ -23,7 +25,9 @@ import { CartProvider } from './contexts/Cart'
 import ShopOrders from './order/ShopOrders'
 import MyOrder from './order/MyOrder'
 import MobileMenu from './components/MobileMenu'
-import useWindowDimension from './hook/useWindowDimension'
+import NewAuction from './auc/NewAuction'
+import OpenAuctions from './auc/OpenAuctions'
+import Auction from './auc/Auction'
 
 
 const MainRouter = () => {
@@ -84,8 +88,14 @@ const MainRouter = () => {
                     <PrivateRoute>
                         <MyOrder />
                     </PrivateRoute>
-                }
-                />
+                }/>
+                <Route path='/auctions/new' element={
+                    <PrivateRoute>
+                        <NewAuction />
+                    </PrivateRoute>
+                } />
+                <Route path='/auctions/all' element={<OpenAuctions />} />
+                <Route path='/auction/:auctionId' element={<Auction />} />
             </Routes>
         </CartProvider>
     )
