@@ -116,15 +116,15 @@ const NewProduct = () => {
             />
             
             <Box sx={{ width: '80%', display: 'flex', justifyContent: 'center', mt: '20px'  }}>
-            <CardActions>
-                <Button onClick={handleSubmit}
-                sx={{ bgcolor: 'primary.main', color: 'primary.contrastText', 'width': '80px', '&:hover': { bgcolor: '#b82727' } }}
-                >Submit</Button>
-            </CardActions>
-            <CardActions>
-                <Button sx={{ bgcolor: 'tertiary.main', color: 'tertiary.contrastText', width: '80px', '&:hover': { bgcolor: 'tertiary.hover' } }}
-                >Cancel</Button>
-            </CardActions>
+                <CardActions>
+                    <Button onClick={handleSubmit}
+                    sx={{ bgcolor: 'primary.main', color: 'primary.contrastText', 'width': '80px', '&:hover': { bgcolor: '#b82727' } }}
+                    >Submit</Button>
+                </CardActions>
+                <CardActions>
+                    <Button sx={{ bgcolor: 'tertiary.main', color: 'tertiary.contrastText', width: '80px', '&:hover': { bgcolor: 'tertiary.hover' } }}
+                    >Cancel</Button>
+                </CardActions>
             </Box>
         </CardContent>
     </Card>

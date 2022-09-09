@@ -31,15 +31,17 @@ const Menu = () => {
     return (
     <AppBar position='static'>
         <Toolbar sx={{ display: 'flex', justifyContent: 'space-between', width: '98%' }}>
-            <Box sx={{  ml: '20px', display: 'flex', width: '360px', justifyContent: 'space-between' }}>
+            <Box sx={{  ml: '20px', display: 'flex', width: '480px', justifyContent: 'space-between' }}>
                 <Typography sx={{ fontWeight: 600, letterSpacing: '0.2rem' }}>
                     <Link style={{ color: 'white' }} to='/'>MARKETPLACE</Link>
                 </Typography>
-                <Box sx={{ display: 'flex', width: '50%', justifyContent: 'space-between'  }}>
+                <Box sx={{ display: 'flex', width: '60%', justifyContent: 'space-around'  }}>
                     {authObj?.user.seller && (
                         <Link to='/seller/shops' style={{ color: 'white', fontWeight: 500 }}>MY SHOP</Link>)
                     }
                     <Link to='/shops/all' style={{ color: 'white', fontWeight: 500 }}>ALL SHOPS</Link>
+                    <Link to='/auctions/all' style={{ color: 'white', fontWeight: 500 }}>AUCTIONS</Link>
+
                 </Box>
             </Box>
             <Box sx={{ display: 'flex', width: '160px', justifyContent: 'space-between'}}>

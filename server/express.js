@@ -11,6 +11,7 @@ import userRoutes from './routes/user.routes'
 import shopRoutes from './routes/shop.routes'
 import productRoutes from './routes/product.routes'
 import orderRoutes from './routes/order.routes'
+import auctionRoutes from './routes/auction.routes'
 
 import template from '../template'
 
@@ -35,6 +36,7 @@ app.use('/api/users', userRoutes)
 app.use('/api/shops', shopRoutes)
 app.use('/api/products', productRoutes)
 app.use('/api/orders', orderRoutes)
+app.use('/api/auctions', auctionRoutes)
 
 app.get('*', (req, res, next) => {
     res.send(template())

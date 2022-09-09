@@ -1,0 +1,8 @@
+Aug 9
+
+Bugs:
+1. Socket does not listen on 'new bid' event (sth wrong with socket io)
+
+
+
+(book: 883)
