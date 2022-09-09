@@ -1,6 +1,6 @@
 # marketplace
 
-An online e-commerce application with seller accounts, product search and suggestion, shopping cart, order management and Stripe payment - developed using React, Node.js, Express.js and MongoDB.
+An online e-commerce application with seller accounts, product search and suggestion, shopping cart, order management, Stripe payment and real-time biddings - developed using React, Node.js, Socket.IO and MongoDB.
 
 ![MarketPlace](./client/src/assets/images/market-place.png)
 
